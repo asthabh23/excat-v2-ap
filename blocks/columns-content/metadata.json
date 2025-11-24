@@ -1,0 +1,42 @@
+{
+  "variantName": "columns-content",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-11-21T13:12:15.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audemarspiguet.com/com/en/news/art/petrit-halilaj-and-alvaro-urbano-barcelona.html",
+    "originPage": "news article page",
+    "blockPosition": "multiple (sections 2, 3, 6, 8, 9)"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "content-layout",
+    "imagePattern": "mixed"
+  },
+  "contentPattern": {
+    "structure": "2-column side-by-side layout",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news articles with image-text layouts",
+      "content pages with side-by-side information",
+      "about/bio sections with portraits",
+      "general two-column content display"
+    ],
+    "notSuitableFor": [
+      "3+ column layouts",
+      "data tables",
+      "product comparison grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "content/com/en/news/art/petrit-halilaj-and-alvaro-urbano-barcelona"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-11-21T13:12:15.000Z"
+  }
+}

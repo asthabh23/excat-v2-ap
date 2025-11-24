@@ -1,0 +1,76 @@
+.columns-content {
+  padding: 50px 0;
+}
+
+.columns-content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.columns-content img {
+  width: 100%;
+}
+
+.columns-content > div > div {
+  order: 1;
+  flex: 1;
+}
+
+.columns-content > div > .columns-content-img-col {
+  order: 0;
+  flex: 1;
+}
+
+.columns-content > div > .columns-content-img-col img {
+  display: block;
+}
+
+.columns-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.49;
+  margin: 0 0 1em;
+}
+
+.columns-content strong {
+  font-weight: 500;
+}
+
+.columns-content h2 {
+  margin-bottom: 0.5em;
+}
+
+/* Styling for "Visit THE Exhibition" type headings in columns-content sections */
+.columns-content-container h2 {
+  text-transform: uppercase;
+  letter-spacing: -0.56px;
+  margin-bottom: 0.5em;
+}
+
+.columns-content-container h2 + p em {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 250;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -0.56px;
+}
+
+@media (width >= 900px) {
+  .columns-content > div {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .columns-content > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  .columns-content.columns-content-2-cols > div > div {
+    flex: 1;
+  }
+}

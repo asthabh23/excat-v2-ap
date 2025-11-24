@@ -1,0 +1,12 @@
+{
+  "blockName": "columns-image",
+  "variantName": "columns-image",
+  "description": "Two-column layout with larger image emphasis (60/40 split on desktop)",
+  "usage": [
+    {
+      "page": "/content/com/en/news/art/petrit-halilaj-and-alvaro-urbano-barcelona.md",
+      "sections": [3, 8, 9]
+    }
+  ],
+  "created": "2025-11-23"
+}

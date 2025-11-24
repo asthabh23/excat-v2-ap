@@ -15,29 +15,34 @@
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --text-color: #000;
+  --text-color-gray: #818181;
+  --link-color: #000;
+  --link-hover-color: #505050;
+  --dark-green: rgb(43, 79, 79);
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  --heading-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 48px;
   --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
 
   /* nav height */
   --nav-height: 64px;
+
+  /* container width */
+  --container-width: 780px;
 }
 
 /* fallback fonts */
@@ -77,7 +82,8 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-weight: 300;
+  line-height: 1.49;
 }
 
 body.appear {
@@ -104,11 +110,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
+  margin-top: 0;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 100;
+  line-height: 1;
   scroll-margin: 40px;
 }
 
@@ -172,16 +178,17 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border: 0;
+  border-radius: 0;
+  padding: 20px 16px;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: var(--text-color);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
@@ -195,6 +202,7 @@ button:hover,
 button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
+  text-decoration: none;
 }
 
 button:disabled,
@@ -233,13 +241,97 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: auto;
   padding: 0 24px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
+}
+
+/* hero section styling */
+main > .section:first-of-type > div > p:first-of-type a,
+main > .section:first-of-type > div > p:first-of-type a.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  max-width: none;
+}
+
+main > .section:first-of-type > div > p:first-of-type a::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background-color: var(--dark-green);
+  flex-shrink: 0;
+  transition: width 0.3s ease-in-out, background 0.3s ease-in;
+}
+
+main > .section:first-of-type > div > p:first-of-type a:hover,
+main > .section:first-of-type > div > p:first-of-type a.button:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+main > .section:first-of-type > div > p:first-of-type a:hover::before {
+  width: 100%;
+}
+
+main > .section:first-of-type h1 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.56px;
+}
+
+main > .section:first-of-type h1 + p {
+  font-size: 48px;
+  font-weight: 100;
+  line-height: 48px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+main > .section:first-of-type h1 + p em {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 250;
+}
+
+main > .section:first-of-type h1 + p + p {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--text-color-gray);
+}
+
+main > .section:first-of-type h1 + p + p + p {
+  display: inline-block;
+  margin: 0 0 40px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border: 1px solid var(--text-color);
+  text-transform: uppercase;
 }
 
 @media (width >= 900px) {
@@ -254,4 +346,74 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.dark-green {
+  background-color: var(--dark-green);
+  color: white;
+  margin: 0;
+  padding: 64px 0;
+}
+
+main .section.dark-green > div {
+  max-width: 680px;
+}
+
+main .section.dark-green blockquote {
+  margin: 32px 0;
+  padding: 0;
+  border: none;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+  position: relative;
+}
+
+main .section.dark-green blockquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 39px;
+  line-height: 39px;
+  margin-bottom: 16px;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+main .section.dark-green blockquote p {
+  margin: 32px 0;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+}
+
+main .section.dark-green > div > p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+main .section.dark-green > div > p:first-of-type {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+main .section.dark-green > div > p:first-of-type::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+main .section.dark-green > div > p:last-of-type {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 40px;
 }
