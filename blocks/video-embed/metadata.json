@@ -1,0 +1,31 @@
+{
+  "variantName": "video-embed",
+  "baseBlock": "video",
+  "description": "Embedded video player with YouTube support for service content",
+  "visualCharacteristics": {
+    "colorScheme": "neutral",
+    "density": "standard",
+    "purpose": "content-video",
+    "imagePattern": "video-player",
+    "contentLayout": "centered"
+  },
+  "semanticTags": [
+    "video",
+    "youtube",
+    "embed",
+    "media",
+    "content"
+  ],
+  "usage": {
+    "pagesUsing": [
+      "content/com/en/services/hi-care-programme"
+    ],
+    "reuseCount": 1,
+    "firstUsed": "2025-11-25",
+    "lastUsed": "2025-11-25"
+  },
+  "author": {
+    "name": "EXCAT Migration Tool",
+    "date": "2025-11-25"
+  }
+}

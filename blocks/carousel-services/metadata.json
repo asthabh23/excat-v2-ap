@@ -1,0 +1,31 @@
+{
+  "variantName": "carousel-services",
+  "baseBlock": "carousel",
+  "description": "Carousel variant for service features with cards displaying warranty and coverage information",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "standard",
+    "purpose": "service-features",
+    "imagePattern": "card-images",
+    "contentLayout": "cards-horizontal"
+  },
+  "semanticTags": [
+    "services",
+    "warranty",
+    "coverage",
+    "features",
+    "benefits"
+  ],
+  "usage": {
+    "pagesUsing": [
+      "content/com/en/services/hi-care-programme"
+    ],
+    "reuseCount": 1,
+    "firstUsed": "2025-11-25",
+    "lastUsed": "2025-11-25"
+  },
+  "author": {
+    "name": "EXCAT Migration Tool",
+    "date": "2025-11-25"
+  }
+}

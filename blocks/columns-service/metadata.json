@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-service",
+  "baseBlock": "columns",
+  "description": "Two-column layout variant for service page content with text and images",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "standard",
+    "purpose": "content-layout",
+    "imagePattern": "side-image",
+    "contentLayout": "two-column"
+  },
+  "semanticTags": [
+    "layout",
+    "columns",
+    "text-image",
+    "services",
+    "content"
+  ],
+  "usage": {
+    "pagesUsing": [
+      "content/com/en/services/hi-care-programme"
+    ],
+    "reuseCount": 3,
+    "firstUsed": "2025-11-25",
+    "lastUsed": "2025-11-25"
+  },
+  "author": {
+    "name": "EXCAT Migration Tool",
+    "date": "2025-11-25"
+  }
+}

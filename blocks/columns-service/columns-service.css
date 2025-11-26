@@ -1,0 +1,88 @@
+.columns-service > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 64px 0;
+}
+
+.columns-service img {
+  width: 100%;
+}
+
+/* Default paragraph styling (for unsplit content) */
+.columns-service > div > div:not(.columns-service-img-col) p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+
+/* Heading styles */
+.columns-service > div > div:not(.columns-service-img-col) .columns-service-heading {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 22px;
+  margin-bottom: 20px;
+  letter-spacing: -0.22px;
+}
+
+.columns-service > div > div:not(.columns-service-img-col) .columns-service-heading em {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 250;
+  display: inline;
+}
+
+/* Body text styling */
+.columns-service > div > div:not(.columns-service-img-col) .columns-service-body {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+
+.columns-service > div > div {
+  order: 1;
+}
+
+.columns-service > div > .columns-service-img-col {
+  order: 0;
+}
+
+.columns-service > div > .columns-service-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-service > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 64px;
+    margin: 96px 0;
+  }
+
+  .columns-service > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  /* Desktop heading size */
+  .columns-service > div > div:not(.columns-service-img-col) .columns-service-heading {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Larger heading variant for specific sections */
+  .columns-service > div > div:not(.columns-service-img-col) .columns-service-heading:has(em) {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.56px;
+  }
+
+  /* Body text stays 17px on desktop */
+  .columns-service > div > div:not(.columns-service-img-col) .columns-service-body {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+}

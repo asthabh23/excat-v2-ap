@@ -84,6 +84,7 @@ body {
   font-size: var(--body-font-size-m);
   font-weight: 300;
   line-height: 1.49;
+  letter-spacing: 0.26px;
 }
 
 body.appear {
@@ -102,6 +103,11 @@ footer .footer {
 header .header[data-block-status="loaded"],
 footer .footer[data-block-status="loaded"] {
   visibility: visible;
+}
+
+footer .footer {
+  background-color: var(--dark-green);
+  color: white;
 }
 
 h1,
@@ -124,6 +130,12 @@ h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h2 em {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 250;
+}
 
 p,
 dl,
@@ -164,11 +176,14 @@ a:any-link {
   color: var(--link-color);
   text-decoration: none;
   overflow-wrap: break-word;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.21px;
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* buttons */

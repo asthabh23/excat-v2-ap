@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-hicare",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-11-25T06:31:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audemarspiguet.com/com/en/services/hi-care-programme.html",
+    "originPage": "Audemars Piguet Hi-Care Programme",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "service-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service pages",
+      "product pages with large hero images",
+      "luxury brand landing pages"
+    ],
+    "notSuitableFor": [
+      "blog posts",
+      "text-heavy pages without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/com/en/services/hi-care-programme"],
+    "reuseCount": 1,
+    "lastUsed": "2025-11-25T06:31:00.000Z"
+  }
+}
