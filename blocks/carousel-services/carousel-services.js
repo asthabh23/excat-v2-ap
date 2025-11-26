@@ -90,11 +90,11 @@ function createSlide(row, slideIndex, carouselId) {
         // Create heading for first part
         const heading = document.createElement('p');
         heading.className = 'carousel-services-heading';
-        heading.innerHTML = parts[0];
+        [heading.innerHTML] = parts;
         p.appendChild(heading);
 
         // Create body paragraphs for remaining parts
-        for (let i = 1; i < parts.length; i++) {
+        for (let i = 1; i < parts.length; i += 1) {
           const bodyP = document.createElement('p');
           bodyP.className = 'carousel-services-body';
           bodyP.innerHTML = parts[i];
@@ -124,11 +124,11 @@ function createSlide(row, slideIndex, carouselId) {
         // Create heading for first part
         const heading = document.createElement('p');
         heading.className = 'carousel-services-heading';
-        heading.innerHTML = parts[0];
+        [heading.innerHTML] = parts;
         p.appendChild(heading);
 
         // Create body paragraphs for remaining parts
-        for (let i = 1; i < parts.length; i++) {
+        for (let i = 1; i < parts.length; i += 1) {
           const bodyP = document.createElement('p');
           bodyP.className = 'carousel-services-body';
           bodyP.innerHTML = parts[i];
@@ -178,11 +178,11 @@ export default function decorate(block) {
         // Create intro heading
         const heading = document.createElement('p');
         heading.className = 'carousel-services-intro-heading';
-        heading.innerHTML = parts[0];
+        [heading.innerHTML] = parts;
         firstP.appendChild(heading);
 
         // Create intro body
-        for (let i = 1; i < parts.length; i++) {
+        for (let i = 1; i < parts.length; i += 1) {
           const bodyP = document.createElement('p');
           bodyP.className = 'carousel-services-intro-body';
           bodyP.innerHTML = parts[i];

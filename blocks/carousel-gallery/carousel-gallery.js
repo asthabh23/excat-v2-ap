@@ -1,3 +1,15 @@
+function updateButtonStates(block) {
+  const container = block.querySelector('.carousel-gallery-slides-container');
+  const prevButton = block.querySelector('.slide-prev');
+  const nextButton = block.querySelector('.slide-next');
+
+  if (prevButton) prevButton.disabled = container.scrollLeft <= 0;
+  if (nextButton) {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    nextButton.disabled = container.scrollLeft >= maxScroll - 1;
+  }
+}
+
 function updateActiveSlide(slide, skipButtonUpdate = false) {
   const block = slide.closest('.carousel-gallery');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -43,18 +55,6 @@ function showSlide(block, slideIndex = 0) {
     left: activeSlide.offsetLeft,
     behavior: 'smooth',
   });
-}
-
-function updateButtonStates(block) {
-  const container = block.querySelector('.carousel-gallery-slides-container');
-  const prevButton = block.querySelector('.slide-prev');
-  const nextButton = block.querySelector('.slide-next');
-
-  if (prevButton) prevButton.disabled = container.scrollLeft <= 0;
-  if (nextButton) {
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    nextButton.disabled = container.scrollLeft >= maxScroll - 1;
-  }
 }
 
 function bindEvents(block) {

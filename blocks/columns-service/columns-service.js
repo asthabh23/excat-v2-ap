@@ -33,11 +33,11 @@ export default function decorate(block) {
           // Create heading for first part
           const heading = document.createElement('p');
           heading.className = 'columns-service-heading';
-          heading.innerHTML = parts[0];
+          [heading.innerHTML] = parts;
           p.appendChild(heading);
 
           // Create body paragraphs for remaining parts
-          for (let i = 1; i < parts.length; i++) {
+          for (let i = 1; i < parts.length; i += 1) {
             const bodyP = document.createElement('p');
             bodyP.className = 'columns-service-body';
             bodyP.innerHTML = parts[i];
