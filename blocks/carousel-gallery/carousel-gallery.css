@@ -16,8 +16,7 @@ main > .section > div:has(.carousel-gallery) {
 .carousel-gallery-slides-container {
   position: relative;
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: scroll hidden;
   scroll-snap-type: x mandatory;
 }
 
@@ -85,7 +84,7 @@ main > .section > div:has(.carousel-gallery) {
 }
 
 .carousel-gallery-navigation-buttons button {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(0 0 0 / 10%);
   padding: 0;
   width: 48px;
   height: 48px;
@@ -99,16 +98,6 @@ main > .section > div:has(.carousel-gallery) {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-}
-
-.carousel-gallery-navigation-buttons button:hover {
-  background-color: #f8f8f8;
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-gallery-navigation-buttons button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
 }
 
 .carousel-gallery-navigation-buttons .slide-prev::after {
@@ -145,7 +134,17 @@ main > .section > div:has(.carousel-gallery) {
 }
 
 .carousel-gallery-slide-indicator button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 0 0 / 20%);
+}
+
+.carousel-gallery-navigation-buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-gallery-navigation-buttons button:hover {
+  background-color: #f8f8f8;
+  border-color: rgb(0 0 0 / 20%);
 }
 
 .carousel-gallery-slide-indicator button span {
@@ -155,7 +154,7 @@ main > .section > div:has(.carousel-gallery) {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border-width: 0;
 }
