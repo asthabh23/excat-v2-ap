@@ -268,8 +268,8 @@ main > .section:first-of-type {
 /* hero section styling */
 main > .section:first-of-type > div > p:first-of-type a,
 main > .section:first-of-type > div > p:first-of-type a.button {
-  position: relative;
   display: inline-flex;
+  position: relative;
   align-items: center;
   gap: 16px;
   font-size: 14px;
