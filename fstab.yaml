@@ -1,6 +1,4 @@
 mountpoints:
-  /: https://da.live/edit#/asthabh23/excat-v2-ap
-
-da:
-  org: asthabh23
-  repo: excat-v2-ap
+  /:
+    url: https://content.da.live/asthabh23/excat-v2-ap/
+    type: markup
