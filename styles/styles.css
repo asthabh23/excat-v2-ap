@@ -19,7 +19,7 @@
   --text-color-gray: #818181;
   --link-color: #000;
   --link-hover-color: #505050;
-  --dark-green: rgb(43, 79, 79);
+  --dark-green: rgb(43 79 79);
 
   /* fonts */
   --body-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
@@ -323,38 +323,6 @@ main > .section:first-of-type h1 + p {
   margin-bottom: 32px;
 }
 
-main > .section:first-of-type h1 + p em {
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-weight: 250;
-}
-
-main > .section:first-of-type h1 + p + p {
-  margin-top: 32px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: var(--text-color-gray);
-}
-
-main > .section:first-of-type h1 + p + p + p {
-  display: inline-block;
-  margin: 0 0 40px;
-  padding: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  border: 1px solid var(--text-color);
-  text-transform: uppercase;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
-
 /* section metadata */
 main .section.light,
 main .section.highlight {
@@ -390,7 +358,7 @@ main .section.dark-green blockquote::before {
   font-size: 39px;
   line-height: 39px;
   margin-bottom: 16px;
-  color: rgb(255, 255, 255);
+  color: rgb(255 255 255);
   opacity: 0.5;
   font-weight: 400;
 }
@@ -405,6 +373,38 @@ main .section.dark-green blockquote p {
 main .section.dark-green > div > p {
   font-size: 14px;
   line-height: 20px;
+}
+
+main > .section:first-of-type h1 + p em {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 250;
+}
+
+main > .section:first-of-type h1 + p + p {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--text-color-gray);
+}
+
+main > .section:first-of-type h1 + p + p + p {
+  display: inline-block;
+  margin: 0 0 40px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border: 1px solid var(--text-color);
+  text-transform: uppercase;
+}
+
+@media (width >= 900px) {
+  main > .section > div {
+    padding: 0 32px;
+  }
 }
 
 main .section.dark-green > div > p:first-of-type {
