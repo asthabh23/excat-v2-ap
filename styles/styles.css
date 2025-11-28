@@ -324,55 +324,6 @@ main > .section:first-of-type > div > p:first-of-type a:hover::before {
   width: 100%;
 }
 
-main > .section:first-of-type h1 {
-  margin-top: 40px;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: -0.56px;
-}
-
-main > .section:first-of-type h1 + p {
-  font-size: 48px;
-  font-weight: 100;
-  line-height: 48px;
-  letter-spacing: -0.56px;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 32px;
-}
-
-main > .section:first-of-type h1 + p em {
-  font-family: 'Times Now', 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-weight: 200;
-}
-
-main > .section:first-of-type h1 + p + p {
-  margin-top: 32px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: var(--text-color-gray);
-}
-
-main > .section:first-of-type h1 + p + p + p {
-  display: inline-block;
-  margin: 0 0 40px;
-  padding: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  border: 1px solid var(--text-color);
-  text-transform: uppercase;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 92.5px;
-  }
-}
-
 /* section metadata */
 main .section.light,
 main .section.highlight {
@@ -425,38 +376,6 @@ main .section.dark-green > div > p {
   line-height: 20px;
 }
 
-main > .section:first-of-type h1 + p em {
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-weight: 250;
-}
-
-main > .section:first-of-type h1 + p + p {
-  margin-top: 32px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: var(--text-color-gray);
-}
-
-main > .section:first-of-type h1 + p + p + p {
-  display: inline-block;
-  margin: 0 0 40px;
-  padding: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  border: 1px solid var(--text-color);
-  text-transform: uppercase;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
-
 main .section.dark-green > div > p:first-of-type {
   position: relative;
   display: inline-flex;
@@ -481,4 +400,55 @@ main .section.dark-green > div > p:last-of-type {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 40px;
+}
+
+/* stylelint-disable no-descending-specificity */
+main > .section:first-of-type h1 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.56px;
+}
+
+main > .section:first-of-type h1 + p {
+  font-size: 48px;
+  font-weight: 100;
+  line-height: 48px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+main > .section:first-of-type h1 + p em {
+  font-family: 'Times Now', 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+main > .section:first-of-type h1 + p + p {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--text-color-gray);
+}
+
+main > .section:first-of-type h1 + p + p + p {
+  display: inline-block;
+  margin: 0 0 40px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border: 1px solid var(--text-color);
+  text-transform: uppercase;
+}
+/* stylelint-enable no-descending-specificity */
+
+@media (width >= 900px) {
+  main > .section > div {
+    padding: 0 92.5px;
+  }
 }
