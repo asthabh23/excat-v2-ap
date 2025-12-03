@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plugin Test</title>
+</head>
+<body>
+    <h1>Plugin Files Test</h1>
+    <div id="status"></div>
+    <script>
+        const status = document.getElementById('status');
+        status.innerHTML = '<p>✅ HTML loaded</p>';
+        
+        // Test CSS
+        fetch('refresh-content.css')
+            .then(r => status.innerHTML += '<p>✅ CSS file found</p>')
+            .catch(e => status.innerHTML += '<p>❌ CSS failed: ' + e + '</p>');
+        
+        // Test JS
+        fetch('refresh-content.js')
+            .then(r => status.innerHTML += '<p>✅ JS file found</p>')
+            .catch(e => status.innerHTML += '<p>❌ JS failed: ' + e + '</p>');
+    </script>
+</body>
+</html>
